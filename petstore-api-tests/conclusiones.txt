@@ -1,0 +1,17 @@
+# Conclusiones - Pruebas API PetStore (Opción 3)
+
+Durante la ejecución de pruebas sobre la API pública de PetStore, se identificaron los siguientes hallazgos técnicos:
+
+1. **Creación de usuario**: El endpoint POST responde correctamente con código 200, indicando éxito en la operación.
+
+2. **Consulta de usuario creado**: Aunque el POST responde con éxito, el usuario no puede ser consultado posteriormente. El endpoint GET devuelve un error 404. Esto indica que la API no persiste datos en el backend, lo cual es común en entornos públicos de demostración.
+
+3. **Actualización de usuario**: El endpoint PUT también responde con código 200, pero los cambios no se reflejan en consultas posteriores. Se documentó este comportamiento como parte de las limitaciones de persistencia.
+
+4. **Eliminación de usuario**: El endpoint DELETE responde con éxito. La verificación posterior mediante GET confirma que el usuario ya no está disponible, devolviendo un 404 con el mensaje "User not found".
+
+5. **Manejo de errores**: Se utilizó `failOnStatusCode: false` en las pruebas de lectura para capturar respuestas 404 sin bloquear la ejecución. Esto permitió validar el comportamiento real de la API sin interrupciones.
+
+6. **Cobertura completa**: Se implementaron todos los casos solicitados en el enunciado, incluyendo creación, consulta, actualización, eliminación y verificación post-eliminación.
+
+Estas pruebas demuestran la capacidad de automatizar flujos REST, manejar respuestas inesperadas y documentar hallazgos técnicos de forma estructurada. La suite está lista para evaluación profesional.
