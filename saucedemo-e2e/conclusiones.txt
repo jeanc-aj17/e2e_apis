@@ -13,4 +13,7 @@
   - Separación por Page Objects para mayor escalabilidad.
   - Uso de datos parametrizados para pruebas con múltiples usuarios.
   - Integración con herramientas de reporte como Mochawesome o Allure.
+
   - Ejecución en pipelines CI/CD para validación continua.
+
+La carpeta 'node_modules' tuve que quitarla para poder subir eje ejercicios al repositorio de Gihub
